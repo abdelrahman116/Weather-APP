@@ -1,16 +1,28 @@
-# React + Vite
+# Weather Dashboard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The **Weather Dashboard App** is a web application that allows users to check current weather conditions and a 5-day forecast for any city. The app features a clean interface with dynamic themes that change based on the weather, providing a visually engaging experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Current Weather:** Temperature, humidity, wind speed, and weather conditions.
+- **5-Day Forecast:** Upcoming weather predictions.
+- **City Search & Navigation:** Quickly find weather for any city.
+- **Dynamic Theme:** UI adapts to weather (sunny, rainy, cold, dusty).
+- **Optional:** View historical weather data.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **Frontend:** React.js, Tailwind CSS
+- **State Management:** Zustand (if applicable)
+- **Routing:** React Router
+- **API:** [OpenWeather API](https://openweathermap.org/api)
+- **HTTP Requests:** Axios
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/weather-dashboard.git
+   ```
