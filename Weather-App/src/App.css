@@ -1,9 +1,10 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 .inputFeild {
+  border-radius: 4.75rem;
   display: flex;
   height: 4rem;
-  width: 30rem;
+  width: 35rem;
   border: none;
   outline: none;
   align-content: center;
@@ -12,26 +13,18 @@
   flex: 1;
   margin: 0;
 }
-/* svg {
-  scale: 0.9;
 
-  position: absolute;
-  left: 38.5rem;
-  top: 5.5rem;
-} */
 .location-in {
   margin-top: 2rem;
   display: flex;
   flex-direction: row-reverse;
-  background-color: #ffd0d06f;
+  background-color: rgba(255, 208, 208, 0.7);
   width: 40rem;
-  /* padding: 8px; */
   align-items: center;
   justify-self: center;
 }
 
 .location-SVG {
-  /* z-index: 10; */
   margin-left: 16px;
   border-right: solid black 1px;
   width: 36px;
@@ -42,46 +35,205 @@
 .location-SVG:hover {
   opacity: 0.7;
 }
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 35rem;
+  height: 25rem;
+  color: #fff;
+  background-color: #06102590;
+  border-radius: 0.5rem;
 }
-  
+.deg::after {
+  content: "\00b0";
+}
+.subCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #06102590;
+  height: 25rem;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  font-size: x-large;
+  width: 6.2rem;
+  color: #fff;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 900px) {
+  .weather-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .mainCard {
+    max-width: 20rem;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .subCard {
+    max-width: 3.5rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .sub-container {
+    max-width: 20rem;
+  }
 } */
+
+@import "tailwindcss";
+
+.inputFeild {
+  border-radius: 4.75rem;
+  display: flex;
+  height: 4rem;
+  width: 35rem;
+  border: none;
+  outline: none;
+  align-content: center;
+  padding-left: 1rem;
+  font-weight: 500;
+  flex: 1;
+  margin: 0;
+}
+
+/* Location input container */
+.location-in {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: rgba(255, 208, 208, 0.7);
+  width: 40rem;
+  align-items: center;
+  justify-self: center;
+}
+
+.location-SVG {
+  margin-left: 16px;
+  border-right: solid black 1px;
+  width: 36px;
+  height: 52px;
+  padding-right: 0.5rem;
+}
+
+.location-SVG:hover {
+  opacity: 0.7;
+}
+
+/* ========== WEATHER CARDS ========== */
+.weather-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 35rem;
+  height: 25rem;
+  color: #fff;
+  background-color: #06102590;
+  border-radius: 0.5rem;
+}
+
+.deg::after {
+  content: "\00b0";
+}
+
+.subCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #06102590;
+  height: 25rem;
+  font-size: x-large;
+  width: 6.2rem;
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets and below */
+@media (max-width: 900px) {
+  .inputFeild {
+    width: 90%;
+  }
+
+  .location-in {
+    width: 90%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .weather-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .mainCard {
+    width: 90%;
+    max-width: 25rem;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .subCard {
+    width: 20%;
+    max-width: 5rem;
+    height: auto;
+    padding: 1rem;
+    order: 2; /* Subcard below main card */
+  }
+
+  .mainCard {
+    order: 1; /* Main card on top */
+  }
+}
+
+/* Phones */
+@media (max-width: 400px) {
+  .inputFeild {
+    width: 100%;
+    height: 3.2rem;
+    font-size: 0.9rem;
+  }
+
+  .location-in {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+  }
+
+  .location-SVG {
+    width: 28px;
+    height: 40px;
+  }
+
+  .weather-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainCard {
+    width: 95%;
+    height: auto;
+    padding: 1rem;
+    order: 1;
+  }
+
+  .subCard {
+    width: 90%;
+    height: auto;
+    padding: 0.75rem;
+    font-size: 1rem;
+    order: 2;
+  }
+}
