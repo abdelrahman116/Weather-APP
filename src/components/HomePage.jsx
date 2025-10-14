@@ -823,27 +823,34 @@ export default function HomePage() {
   }, [place, UNSPLASH_KEY, getPlacePhoto]);
 
   // ---------- Restore last location OR ask for auto-location ONCE ----------
-  useEffect(() => {
+  seEffect(() => {
     const saved = localStorage.getItem("lastLocation");
+
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
+
         if (parsed?.lat && parsed?.lon && parsed?.place) {
+          console.log("📦 Restored saved location:", parsed.place);
+
+          // restore location
           setCoords({ lat: parsed.lat, lon: parsed.lon });
           setPlace(parsed.place);
           setManualLocation(!!parsed.manualLocation);
-          return; // skip asking for auto location
+
+          // ✅ fetch weather immediately after restoring
+          getWeather(parsed.lat, parsed.lon);
+
+          return; // stop here → prevents LocationGetter from running
         }
       } catch (err) {
         console.warn("Error parsing saved location", err);
       }
     }
 
-    // If no saved location, allow LocationGetter auto-callback to set initial position.
-    // LocationGetter will call onLocationChange when it has coordinates (source will be undefined -> treated as "auto" here).
-    // We therefore do nothing here: allow LocationGetter to run once and call handleLocationChange (auto).
-  }, []);
-
+    // If nothing saved, allow LocationGetter to run automatically
+    setManualLocation(false);
+  }, [getWeather, setCoords, setPlace]);
   // ---------- UI ----------
   return (
     <div
@@ -882,10 +889,11 @@ export default function HomePage() {
         </svg>
       </div>
 
-      {/* Auto Location (LocationGetter will call onLocationChange when it has coords) */}
-      <LocationGetter
-        onLocationChange={(payload) => handleLocationChange(payload, "auto")}
-      />
+      {!manualLocation && (
+        <LocationGetter
+          onLocationChange={(payload) => handleLocationChange(payload, "auto")}
+        />
+      )}
 
       <div className="weather-container flex justify-around gap-2 mt-25">
         <MainCard
