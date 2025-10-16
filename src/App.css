@@ -132,7 +132,7 @@ body {
 
   .location-in {
     width: 100%;
-    background-color: #06102580;
+    /* background-color: #06102580; */
     flex-direction: row-reverse;
     justify-content: space-around;
     padding: 0.5rem;

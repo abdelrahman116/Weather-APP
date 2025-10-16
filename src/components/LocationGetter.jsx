@@ -8,7 +8,6 @@ function LocationGetter({ onLocationChange }) {
   const getPlaceFromCoords = useCallback(
     async (lat, lon) => {
       try {
-        // ✅ Using Nominatim (no API key needed)
         const res = await fetch(
           `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json&accept-language=en`
         );
@@ -28,7 +27,6 @@ function LocationGetter({ onLocationChange }) {
           const placeName = `${country}, ${city}`;
           setPlace(placeName);
 
-          // Notify parent component
           onLocationChange?.({ lat, lon, place: placeName });
         } else {
           setError("Could not determine location name.");

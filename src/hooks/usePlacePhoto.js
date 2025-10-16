@@ -9,11 +9,9 @@ export default function usePlacePhoto() {
     async (place) => {
       if (!place) return "";
 
-      // ✅ Check cache first
       if (cache.current[place]) return cache.current[place];
 
       try {
-        // Smart search query for better relevance
         const query = `${place}`;
         const res = await fetch(
           `https://api.unsplash.com/search/photos?query=${encodeURIComponent(
@@ -27,7 +25,6 @@ export default function usePlacePhoto() {
         const data = await res.json();
         const imageUrl = data.results?.[0]?.urls?.regular || "";
 
-        // ✅ Cache and return
         cache.current[place] = imageUrl;
         return imageUrl;
       } catch (error) {
