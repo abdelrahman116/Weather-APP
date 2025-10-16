@@ -27,7 +27,6 @@ function LocationGetter({ onLocationChange }) {
           const placeName = `${country}, ${city}`;
           setPlace(placeName);
 
-          // Notify parent component
           onLocationChange?.({ lat, lon, place: placeName });
         } else {
           setError("Could not determine location name.");
