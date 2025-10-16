@@ -8,7 +8,6 @@ function LocationGetter({ onLocationChange }) {
   const getPlaceFromCoords = useCallback(
     async (lat, lon) => {
       try {
-        // ✅ Using Nominatim (no API key needed)
         const res = await fetch(
           `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json&accept-language=en`
         );
