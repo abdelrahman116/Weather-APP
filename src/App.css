@@ -1,86 +1,10 @@
-/* @import "tailwindcss";
-
-.inputFeild {
-  border-radius: 4.75rem;
-  display: flex;
-  height: 4rem;
-  width: 35rem;
-  border: none;
-  outline: none;
-  align-content: center;
-  padding-left: 1rem;
-  font-weight: 500;
-  flex: 1;
-  margin: 0;
-}
-
-.location-in {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row-reverse;
-  background-color: rgba(255, 208, 208, 0.7);
-  width: 40rem;
-  align-items: center;
-  justify-self: center;
-}
-
-.location-SVG {
-  margin-left: 16px;
-  border-right: solid black 1px;
-  width: 36px;
-  height: 52px;
-  padding-right: 0.5rem;
-}
-
-.location-SVG:hover {
-  opacity: 0.7;
-}
-.mainCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 35rem;
-  height: 25rem;
-  color: #fff;
-  background-color: #06102590;
-  border-radius: 0.5rem;
-}
-.deg::after {
-  content: "\00b0";
-}
-.subCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 0.5rem;
-  background-color: #06102590;
-  height: 25rem;
-
-  font-size: x-large;
-  width: 6.2rem;
-  color: #fff;
-}
-@media (max-width: 900px) {
-  .weather-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .mainCard {
-    max-width: 20rem;
-  }
-  .subCard {
-    max-width: 3.5rem;
-  }
-  .sub-container {
-    max-width: 20rem;
-  }
-} */
-
 @import "tailwindcss";
-
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
 .inputFeild {
   border-radius: 4.75rem;
   display: flex;
@@ -107,11 +31,11 @@
 }
 
 .location-SVG {
-  margin-left: 16px;
-  border-right: solid black 1px;
-  width: 36px;
-  height: 52px;
-  padding-right: 0.5rem;
+  /* margin-left: 16px; */
+  /* border-right: solid black 1px; */
+  width: 60px;
+  height: 75px;
+  /* padding-right: 0.5rem; */
 }
 
 .location-SVG:hover {
@@ -207,19 +131,17 @@
 
   .location-in {
     width: 100%;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-around;
     padding: 0.5rem;
+    /* position: relative; */
   }
 
   .location-SVG {
+    position: absolute;
+    left: 20;
     width: 28px;
     height: 40px;
-  }
-
-  .weather-container {
-    flex-direction: column;
-    align-items: center;
   }
 
   .mainCard {
@@ -227,6 +149,7 @@
     height: auto;
     padding: 1rem;
     order: 1;
+    margin: 0;
   }
 
   .subCard {
