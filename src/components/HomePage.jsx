@@ -15,7 +15,7 @@ export default function HomePage() {
   const [weather, setWeather] = useState([
     { degree: 25, humidity: 70, speed: 15 },
   ]);
-  const [forecast, setForecast] = useState([]); // 🔹 NEW: 5-day forecast
+  const [forecast, setForecast] = useState([]); 
   const [inputValue, setInputValue] = useState("");
   const [manualLocation, setManualLocation] = useState(false);
 
