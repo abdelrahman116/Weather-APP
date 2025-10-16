@@ -84,7 +84,7 @@ body {
 /* ================= RESPONSIVE ================= */
 
 /* Tablets and below */
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   .inputFeild {
     width: 90%;
   }
@@ -107,7 +107,8 @@ body {
     height: auto;
     padding: 1rem;
   }
-
+  .sub-container {
+  }
   .subCard {
     width: 20%;
     max-width: 5rem;
@@ -122,7 +123,7 @@ body {
 }
 
 /* Phones */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .inputFeild {
     width: 100%;
     height: 3.2rem;
@@ -131,15 +132,17 @@ body {
 
   .location-in {
     width: 100%;
+    background-color: #06102580;
     flex-direction: row-reverse;
     justify-content: space-around;
     padding: 0.5rem;
-    /* position: relative; */
+    padding-left: 2rem;
+    position: relative;
   }
 
   .location-SVG {
     position: absolute;
-    left: 20;
+    left: 20px;
     width: 28px;
     height: 40px;
   }
@@ -151,12 +154,22 @@ body {
     order: 1;
     margin: 0;
   }
-
+  .sub-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 20rem;
+    max-height: 20rem;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+  }
   .subCard {
-    width: 90%;
+    flex: 0 0 auto;
+    width: 6rem;
     height: auto;
     padding: 0.75rem;
     font-size: 1rem;
-    order: 2;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 }

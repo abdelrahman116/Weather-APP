@@ -325,7 +325,7 @@ export default function HomePage() {
         />
 
         {/* 5-Day Forecast */}
-        <div className="sub-container flex justify-around gap-5 flex-wrap mt-5">
+        <div className="sub-container flex justify-around gap-5 mt-5">
           {forecast.map((d, i) => (
             <Subc
               key={i}
