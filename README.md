@@ -1,8 +1,8 @@
-# Weather Dashboard App
+# Weather App
 
 ## Overview
 
-The **Weather Dashboard App** is a web application that allows users to check current weather conditions and a 5-day forecast for any city. The app features a clean interface with dynamic backgrounds that change between day and night, providing a visually engaging and intuitive experience.
+The **Weather App** is a web application that allows users to check current weather conditions and a 5-day forecast for any city. The app features a clean interface with dynamic backgrounds that change between day and night, providing a visually engaging and intuitive experience.
 
 ## Features
 
