@@ -31,11 +31,8 @@ body {
 }
 
 .location-SVG {
-  /* margin-left: 16px; */
-  /* border-right: solid black 1px; */
   width: 60px;
   height: 75px;
-  /* padding-right: 0.5rem; */
 }
 
 .location-SVG:hover {
@@ -123,11 +120,11 @@ body {
     max-width: 5rem;
     height: auto;
     padding: 1rem;
-    order: 2; /* Subcard below main card */
+    order: 2;
   }
 
   .mainCard {
-    order: 1; /* Main card on top */
+    order: 1;
   }
 }
 
@@ -141,7 +138,6 @@ body {
 
   .location-in {
     width: 100%;
-    /* background-color: #06102580; */
     flex-direction: row-reverse;
     justify-content: space-around;
     padding: 0.5rem;
@@ -178,7 +174,6 @@ body {
     height: auto;
     padding: 0.75rem;
     font-size: 1rem;
-
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 }
