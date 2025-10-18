@@ -15,7 +15,7 @@ export default function HomePage() {
   const [weather, setWeather] = useState([
     { degree: 25, humidity: 70, speed: 15 },
   ]);
-  const [forecast, setForecast] = useState([]); 
+  const [forecast, setForecast] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [manualLocation, setManualLocation] = useState(false);
 
@@ -41,7 +41,7 @@ export default function HomePage() {
         const localTimeString = localDateObj.toLocaleTimeString("en-US", {
           hour: "2-digit",
           minute: "2-digit",
-          hour12: false,
+          hour12: true,
         });
 
         const localDayString = localDateObj.toLocaleDateString("en-US", {
@@ -285,7 +285,7 @@ export default function HomePage() {
       className="min-h-screen  w-full bg-cover bg-no-repeat bg-center text-3xl text-black transition-all duration-700 overflow-y-auto"
       style={{
         backgroundImage: bgImage ? `url(${bgImage})` : "none",
-        backgroundAttachment: "fixed", // keeps the background still when scrolling
+        backgroundAttachment: "fixed",
       }}
     >
       {/* Search Input */}
@@ -313,7 +313,7 @@ export default function HomePage() {
           onLocationChange={(payload) => handleLocationChange(payload, "auto")}
         />
       )}
-      <div className="weather-container flex flex-col  items-center mt-15">
+      <div className="weather-container flex flex-col  items-center  mt-35">
         <MainCard
           Country={place}
           Humidity={humidity}
