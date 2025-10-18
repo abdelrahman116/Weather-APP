@@ -2,27 +2,32 @@
 
 ## Overview
 
-The **Weather Dashboard App** is a web application that allows users to check current weather conditions and a 5-day forecast for any city. The app features a clean interface with dynamic themes that change based on the weather, providing a visually engaging experience.
+The **Weather Dashboard App** is a web application that allows users to check current weather conditions and a 5-day forecast for any city. The app features a clean interface with dynamic backgrounds that change between day and night, providing a visually engaging and intuitive experience.
 
 ## Features
 
-- **Current Weather:** Temperature, humidity, wind speed, and weather conditions.
-- **5-Day Forecast:** Upcoming weather predictions.
-- **City Search & Navigation:** Quickly find weather for any city.
-- **Dynamic Theme:** UI adapts to weather (sunny, rainy, cold, dusty).
-- **Optional:** View historical weather data.
+- **Current Weather:** Displays temperature, humidity, wind speed, and weather condition icon.
+- **5-Day Forecast:** Shows upcoming weather predictions with icons and details.
+- **City Search & Navigation:** Quickly search weather for any city worldwide.
+- **Dynamic Background:** Background changes based on local time (day/night) and weather conditions.
+- **Automatic Location Detection:** Optionally fetch weather based on the user’s current location.
+- **Responsive Design:** Works seamlessly on desktop, tablet, and mobile devices.
 
 ## Technologies Used
 
-- **Frontend:** React.js, Tailwind CSS
-- **State Management:** Zustand (if applicable)
-- **Routing:** React Router
-- **API:** [OpenWeather API](https://openweathermap.org/api)
-- **HTTP Requests:** Axios
+- **Frontend:** React.js, Tailwind CSS, Vanilla CSS
+- **Icons:** Lucide React
+- **APIs:**
+  - [OpenWeatherMap API](https://openweathermap.org/api) – for weather data
+  - [OpenCage API](https://opencagedata.com/) – for geocoding (convert location to coordinates)
+  - [Unsplash API](https://unsplash.com/developers) – for dynamic background images
+- **HTTP Requests:** Fetch
+- **Deployment:** Netlify
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/weather-dashboard.git
+   git clone https://github.com/abdelrahman116/Weather-APP.git
+   cd Weather-APP
    ```
